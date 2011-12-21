@@ -8,5 +8,8 @@ class nodejs::params {
                 $package_name   = "nodejs"
             }
         }
+        default: {
+            fail ("The ${module_name} module is not supported on $::operatingsystem")
+        }        
     }
 }
