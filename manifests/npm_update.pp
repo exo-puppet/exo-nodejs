@@ -8,7 +8,7 @@ define nodejs::npm_update ($path, $user) {
             user => "$user",
             group => "$user",
             environment => ["HOME=/home/$user"],
-            logoutput => "true",
+            logoutput => true,
             require => [File["$path"],Class["nodejs::install"]],
     } 
 }
