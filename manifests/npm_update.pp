@@ -1,4 +1,4 @@
-define nodejs::npm-update ($path, $user) {
+define nodejs::npm_update ($path, $user) {
     info("Executes npm update into $path with user $user")
     exec {
         "npm-update-${path}" :
